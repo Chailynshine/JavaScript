@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var now = new Date();//Thu Sep 19 2024 19:07:50 GMT+0800 (China Standard Time)
+        now.getFullYear();//年
+        now.getMonth();//月 0~11 代表月
+        now.getDate();//日
+        now.getDay();//星期几
+        now.getHours();//时
+        now.getMinutes();//分
+        now.getSeconds();//秒
+
+        now.getTime();//时间戳 全世界统一 1970 1.1 0：00：00 毫秒数
+        console.log(new Date(1726744217123))//时间戳变成时间
+
+        now = new Date(1726744217123)//Thu Sep 19 2024 19:10:17 GMT+0800 (China Standard Time)
+        now.toLocaleString()//'9/19/2024, 7:10:17 PM'
+        now.toGMTString()//'Thu, 19 Sep 2024 11:10:17 GMT'
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="" type="">
+</head>
+<body>
+    <!--<p id = "newP">Hello</p>-->
+    <p id = 'js'>JavaScript</p>
+    <div id="list"> 
+        <p id="se">JavaSE</p>
+        <p id="ee">JavaEE</p>
+        <p id="me">JavaME</p>
+    </div>
+
+    <script>
+        // var js = document.getElementById('js');// 已经存在的结点
+        // var list = document.getElementById('list');
+        //通过JS 创建一个新的结点
+        var newP = document.createElement('p');//创建一个p标签
+        newP.id = 'newP';
+        newP.innerText = 'Hello';
+        // list.appendChild(newP);
+        // 创建一个标签节点
+        var myScript = document.createElement('script');
+        myScript.setAttribute('type','text/javascript');
+        //可以创建一个Style标签
+        var myStyle = document.createElement('style');//创建了一个空style标签
+        myStyle.setAttribute('type','text/css');
+        myStyle.innerHTML = 'body{background-color: chartreuse}'//设置标签内容
+        document.getElementsByTagName('head')[0].appendChild(myStyle);
+
+        var ee = document.getElementById('ee');
+        var js = document.getElementById('js');
+        var list = document.getElementById('list');
+        // list节点是父节点，insertBefore(newNode,targetNode)
+        list.insertBefore(js,ee);
+    </script>
+</body>
+</html>

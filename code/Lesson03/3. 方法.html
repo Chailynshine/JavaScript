@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var kuangshen = {
+        //     name:'chailyn',
+        //     birth:2002,
+        //     age:function(){
+        //         var now = new Date().getFullYear();
+        //         return now - this.birth;
+        //     }
+        // }
+        function getAge(){
+                var now = new Date().getFullYear();
+                return now - this.birth;
+            }
+        var kuangshen = {
+            name:'chailyn',
+            birth:2002,
+            age:getAge
+        }
+
+        //kuangshen.age() 22
+        //getAge() NaN window
+        getAge.apply(kuangshen,[])//this,指向了kuangshen,参数为空
+    </script>
+</body>
+</html>

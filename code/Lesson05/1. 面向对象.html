@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var User = {
+            name:"chailyn",
+            age:22,
+            run:function(){
+                console.log(this.name+" run...");
+            }
+        }
+        
+        var xiaoming = {
+            name:"xiaoming"
+        }
+
+        // 小明的原型是User
+        xiaoming.__proto__ = User;
+
+        var Bird = {
+            fly:function(){
+                console.log(this.name+" fly...");
+            }
+        }
+
+        // 小明的原型是Bird
+        xiaoming.__proto__ = Bird;
+    
+    </script>
+</body>
+</html>
